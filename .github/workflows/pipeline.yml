@@ -1,0 +1,14 @@
+name: Pipeline
+
+on: [push]
+
+steps:
+  checkout-test:
+    -name: Checkout and test
+     uses: actions/checkout@v2
+  
+  build:
+    -name: Builds
+     needs: checkout-test
+     uses: actions/checkout@v2
+  
